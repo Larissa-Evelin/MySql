@@ -1,0 +1,6 @@
+insert into pessoas values
+(default, 'Amor', '1979-02-20', 'F', '76.2', '1.90', default),
+(default, 'Alegria', '1945-02-10', 'F', '50.2', '1.70', default),
+(default, 'Cerebro', '1980-10-3', 'F', '30.2', '1.60', default);
+
+select * from pessoas;

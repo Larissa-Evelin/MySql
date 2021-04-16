@@ -1,0 +1,4 @@
+update curso
+set nome = 'Java' , carga = '40' , ano = '2015'
+where idcurso = '5'
+limit 1;

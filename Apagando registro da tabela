@@ -1,0 +1,2 @@
+delete from curso 
+where idcurso = '8';

@@ -1,0 +1,3 @@
+update curso
+set nome = 'PHP', ano = '2015'
+where idcurso = '4';

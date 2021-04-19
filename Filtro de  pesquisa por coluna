@@ -1,0 +1,3 @@
+select * from curso
+where ano = '2016'
+order by nome;

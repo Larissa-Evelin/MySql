@@ -1,0 +1,2 @@
+select nome, ano from curso
+where ano between 2014 and 2016;

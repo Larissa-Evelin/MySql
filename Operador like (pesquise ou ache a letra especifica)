@@ -1,0 +1,2 @@
+select  * from curso
+where nome like 'a%';

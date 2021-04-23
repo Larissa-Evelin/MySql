@@ -1,0 +1,2 @@
+select distinct carga from curso
+order by carga;

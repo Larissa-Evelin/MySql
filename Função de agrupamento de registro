@@ -1,0 +1,3 @@
+select carga, count(*) from curso
+group by carga
+order by carga;

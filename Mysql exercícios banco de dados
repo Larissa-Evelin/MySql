@@ -1,0 +1,60 @@
+create database mundo;
+use mundo;
+
+create table pais (
+nome varchar (35) not null,
+primary key (nome),
+continente varchar(35),
+populacao float,
+pib float,
+exp_vida float);
+
+select nome from pais
+ where pib > (select pib from pais where nome = 'canada');
+ 
+ select * from cidade as c left join pais as p on (c.capital = p.pib);
+ 
+ select cidade.nome, pais.pib from cidade join pais on pais.nome = cidade.pais where pais.pib > 1000 and capital = 'S';
+
+
+create table cidade (
+nome varchar (35) not null,
+primary key (nome),
+pais varchar (35),
+populacao float,
+capital varchar(1),
+foreign key (pais) references pais (nome));
+
+select nome, populacao, capital
+
+create table rio (
+nome varchar (35) not null,
+primary key (nome),
+origem varchar (35),
+comprimento float,
+foreign key (origem) references pais (nome));
+
+select origem, nome, comprimento from rio
+order by comprimento asc;
+
+insert into pais values
+('Canada', 'AM. Norte', 30.1, 658, 77.08),
+('Mexico', 'AM. Norte', 107.5, 694, 69.1),
+('Brasil', 'AM. Sul', 183.3, 10004, 65.2),
+('USA', 'AM. Norte', 270.0, 8003, 75.5);
+
+insert into cidade values
+('Washington', 'USA', 3.3, 'S'),
+('Monterrey', 'Mexico', 2.0, 'N'),
+('Brasilia', 'Brasil', 1.5, 'S'),
+('São Paulo', 'Brasil', 15.0, 'N'),
+('Ottawa', 'Canada', 0.8, 'S'),
+('Cid. Mexico', 'Mexico', 14.1, 'S');
+
+insert into rio values
+('ST. Lawrence', 'USA', 3.3),
+('Grande', 'USA',  2.0),
+('Parana', 'Brasil', 1.5),
+('Mississipi', 'USA', 15.0);
+
+select * from cidade;
